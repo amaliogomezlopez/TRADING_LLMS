@@ -1,0 +1,13 @@
+# REQUIREMENTS - Versión simplificada sin versiones específicas
+# Usa esto si tienes problemas con el requirements.txt original
+
+# Core dependencies
+python-binance
+groq
+python-dotenv
+pyyaml
+
+# Data analysis and technical indicators
+ta
+pandas
+numpy
