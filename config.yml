@@ -1,0 +1,80 @@
+# ⚙️ CONFIGURACIÓN DEL TRADING BOT
+# Edita estos valores según tu estrategia
+
+# === CONFIGURACIÓN DE TRADING ===
+trading:
+  symbol: 'BTCUSDT'              # Par de criptomonedas a tradear
+  quantity: 0.001                 # Cantidad por operación (BTC)
+  
+  # TIMEFRAME: Determina cada cuánto tiempo analiza el mercado
+  # Opciones: 1m, 5m, 15m, 1h, 4h, 1d
+  # 1m  = Ultra rápido (scalping) - Cada 1 minuto
+  # 5m  = Rápido (day trading)    - Cada 5 minutos
+  # 15m = Balanceado              - Cada 15 minutos (recomendado para testing)
+  # 1h  = Conservador             - Cada 1 hora
+  # 4h  = Muy conservador         - Cada 4 horas
+  # 1d  = Swing trading           - Cada 1 día
+  timeframe: '5m'                 # ← CAMBIAR AQUÍ para modificar velocidad
+
+# === GESTIÓN DE RIESGO ===
+risk_management:
+  stop_loss_percent: 0.02         # 2% - Pérdida máxima por trade
+  take_profit_percent: 0.03       # 3% - Ganancia objetivo por trade
+  max_total_loss: -100.0          # $100 - Pérdida máxima total (bot se detiene)
+
+# === INDICADORES TÉCNICOS ===
+technical_indicators:
+  rsi:
+    period: 14                    # Período del RSI
+    oversold: 30                  # Umbral de sobreventa (señal de compra)
+    overbought: 70                # Umbral de sobrecompra (señal de venta)
+  
+  ema:
+    short_period: 9               # EMA de corto plazo
+    long_period: 21               # EMA de largo plazo
+  
+  klines_limit: 100               # Número de velas a obtener para análisis
+
+# === CONFIGURACIÓN DEL LLM ===
+llm:
+  model: 'llama-3.1-8b-instant'   # Modelo de Groq
+  temperature: 0.3                # Creatividad (0.0 = conservador, 1.0 = creativo)
+  max_tokens: 20                  # Tokens máximos en respuesta
+
+# === LOGGING ===
+logging:
+  log_file: 'trading_log.csv'     # Archivo de log
+  enable_console_output: true     # Mostrar en consola
+
+# === ESTRATEGIAS PREDEFINIDAS ===
+# Descomenta una de estas secciones para aplicar una estrategia completa
+
+# # ESTRATEGIA SCALPING (1 minuto)
+# strategy_preset: 'scalping'
+# # Automáticamente configura:
+# # - timeframe: 1m
+# # - stop_loss: 0.5%
+# # - take_profit: 1%
+# # - rsi_oversold: 25
+# # - rsi_overbought: 75
+
+# # ESTRATEGIA DAY TRADING (5 minutos)
+# strategy_preset: 'day_trading'
+# # Automáticamente configura:
+# # - timeframe: 5m
+# # - stop_loss: 1%
+# # - take_profit: 2%
+
+# # ESTRATEGIA BALANCEADA (15 minutos) - RECOMENDADA
+# strategy_preset: 'balanced'
+# # Automáticamente configura:
+# # - timeframe: 15m
+# # - stop_loss: 2%
+# # - take_profit: 3%
+
+# # ESTRATEGIA CONSERVADORA (1 hora)
+# strategy_preset: 'conservative'
+# # Automáticamente configura:
+# # - timeframe: 1h
+# # - stop_loss: 3%
+# # - take_profit: 5%

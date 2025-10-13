@@ -2,6 +2,7 @@
 python-binance==1.0.19
 groq==0.9.0
 python-dotenv==1.0.0
+pyyaml==6.0.1
 
 # Data analysis and technical indicators
 ta==0.11.0

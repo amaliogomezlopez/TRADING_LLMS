@@ -2,6 +2,7 @@ import os
 import time
 import re
 import csv
+import yaml
 from datetime import datetime
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
@@ -16,31 +17,95 @@ from ta.volatility import BollingerBands
 # Load environment variables from .env file
 load_dotenv()
 
+# --- Load Configuration from YAML ---
+def load_config(config_file='config.yml'):
+    """Loads configuration from YAML file."""
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            config = yaml.safe_load(f)
+        print(f"✓ Configuration loaded from {config_file}")
+        return config
+    except FileNotFoundError:
+        print(f"⚠️ Configuration file {config_file} not found. Using default values.")
+        return None
+    except Exception as e:
+        print(f"⚠️ Error loading configuration: {e}. Using default values.")
+        return None
+
+# Load config
+config = load_config()
+
 # --- Binance Configuration ---
 BINANCE_API_KEY = os.getenv("BINANCE_API_KEY")
 BINANCE_API_SECRET = os.getenv("BINANCE_API_SECRET")
 
-# --- Groq Configuration ---
-# The GROQ_API_KEY is automatically loaded
-
-# --- Trading Bot Parameters ---
-SYMBOL = 'BTCUSDT'
-QUANTITY = 0.001
-INTERVAL = Client.KLINE_INTERVAL_5MINUTE  # Trading más rápido (cada 5 min)
-LOG_FILE = 'trading_log.csv'
-
-# --- Risk Management Parameters ---
-STOP_LOSS_PERCENT = 0.02  # 2% stop loss
-TAKE_PROFIT_PERCENT = 0.03  # 3% take profit
-MAX_TOTAL_LOSS = -100.0  # Maximum acceptable total loss in USDT
-
-# --- Technical Analysis Parameters ---
-RSI_PERIOD = 14
-RSI_OVERSOLD = 30
-RSI_OVERBOUGHT = 70
-EMA_SHORT = 9
-EMA_LONG = 21
-KLINES_LIMIT = 100  # Fetch more data for better indicator calculation
+# --- Trading Bot Parameters (from config or defaults) ---
+if config:
+    SYMBOL = config['trading']['symbol']
+    QUANTITY = config['trading']['quantity']
+    
+    # Map timeframe string to Binance constant
+    timeframe_map = {
+        '1m': Client.KLINE_INTERVAL_1MINUTE,
+        '5m': Client.KLINE_INTERVAL_5MINUTE,
+        '15m': Client.KLINE_INTERVAL_15MINUTE,
+        '1h': Client.KLINE_INTERVAL_1HOUR,
+        '4h': Client.KLINE_INTERVAL_4HOUR,
+        '1d': Client.KLINE_INTERVAL_1DAY
+    }
+    
+    timeframe_str = config['trading']['timeframe']
+    INTERVAL = timeframe_map.get(timeframe_str, Client.KLINE_INTERVAL_5MINUTE)
+    
+    # Calculate wait_time based on timeframe
+    wait_time_map = {
+        '1m': 60,       # 1 minute
+        '5m': 300,      # 5 minutes
+        '15m': 900,     # 15 minutes
+        '1h': 3600,     # 1 hour
+        '4h': 14400,    # 4 hours
+        '1d': 86400     # 1 day
+    }
+    WAIT_TIME = wait_time_map.get(timeframe_str, 300)
+    
+    LOG_FILE = config['logging']['log_file']
+    
+    # Risk Management
+    STOP_LOSS_PERCENT = config['risk_management']['stop_loss_percent']
+    TAKE_PROFIT_PERCENT = config['risk_management']['take_profit_percent']
+    MAX_TOTAL_LOSS = config['risk_management']['max_total_loss']
+    
+    # Technical Indicators
+    RSI_PERIOD = config['technical_indicators']['rsi']['period']
+    RSI_OVERSOLD = config['technical_indicators']['rsi']['oversold']
+    RSI_OVERBOUGHT = config['technical_indicators']['rsi']['overbought']
+    EMA_SHORT = config['technical_indicators']['ema']['short_period']
+    EMA_LONG = config['technical_indicators']['ema']['long_period']
+    KLINES_LIMIT = config['technical_indicators']['klines_limit']
+    
+    # LLM Configuration
+    LLM_MODEL = config['llm']['model']
+    LLM_TEMPERATURE = config['llm']['temperature']
+    LLM_MAX_TOKENS = config['llm']['max_tokens']
+else:
+    # Default values if config file is not found
+    SYMBOL = 'BTCUSDT'
+    QUANTITY = 0.001
+    INTERVAL = Client.KLINE_INTERVAL_5MINUTE
+    WAIT_TIME = 300
+    LOG_FILE = 'trading_log.csv'
+    STOP_LOSS_PERCENT = 0.02
+    TAKE_PROFIT_PERCENT = 0.03
+    MAX_TOTAL_LOSS = -100.0
+    RSI_PERIOD = 14
+    RSI_OVERSOLD = 30
+    RSI_OVERBOUGHT = 70
+    EMA_SHORT = 9
+    EMA_LONG = 21
+    KLINES_LIMIT = 100
+    LLM_MODEL = 'llama-3.1-8b-instant'
+    LLM_TEMPERATURE = 0.3
+    LLM_MAX_TOKENS = 20
 
 PROMPT_TEMPLATE = """
 You are an expert cryptocurrency trader analyzing {symbol}.
@@ -253,10 +318,10 @@ def get_trading_signal_with_groq(technical_data, symbol):
         client = Groq()
         prompt_content = PROMPT_TEMPLATE.format(symbol=symbol, **technical_data)
         completion = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model=LLM_MODEL,
             messages=[{"role": "user", "content": prompt_content}],
-            temperature=0.3,  # Slightly higher for more balanced decisions
-            max_tokens=20,
+            temperature=LLM_TEMPERATURE,
+            max_tokens=LLM_MAX_TOKENS,
             stream=False
         )
         raw_response = completion.choices[0].message.content
@@ -310,11 +375,18 @@ def main():
     print("=" * 60)
     print("ADVANCED TRADING BOT WITH TECHNICAL ANALYSIS")
     print("=" * 60)
+    if config:
+        timeframe_display = config['trading']['timeframe']
+        print(f"📝 Configuration: Loaded from config.yml")
+    else:
+        timeframe_display = "5m (default)"
+        print(f"📝 Configuration: Using defaults")
     print(f"Symbol: {SYMBOL}")
-    print(f"Interval: {INTERVAL}")
+    print(f"Timeframe: {timeframe_display}")
     print(f"Stop Loss: {STOP_LOSS_PERCENT*100}%")
     print(f"Take Profit: {TAKE_PROFIT_PERCENT*100}%")
     print(f"Max Total Loss: ${MAX_TOTAL_LOSS}")
+    print(f"LLM Model: {LLM_MODEL}")
     print("=" * 60)
     
     setup_log_file()
@@ -488,9 +560,11 @@ def main():
             print("⚠️ Failed to fetch market data")
         
         # Wait for next cycle - synchronized with interval
-        wait_time = 300  # 5 minutes = 300 seconds for 5m interval
-        print(f"\n⏳ Waiting {wait_time//60} minutes for next cycle...")
-        time.sleep(wait_time)
+        if WAIT_TIME >= 60:
+            print(f"\n⏳ Waiting {WAIT_TIME//60} minutes for next cycle...")
+        else:
+            print(f"\n⏳ Waiting {WAIT_TIME} seconds for next cycle...")
+        time.sleep(WAIT_TIME)
 
 if __name__ == "__main__":
     main()
