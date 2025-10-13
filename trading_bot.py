@@ -26,7 +26,7 @@ BINANCE_API_SECRET = os.getenv("BINANCE_API_SECRET")
 # --- Trading Bot Parameters ---
 SYMBOL = 'BTCUSDT'
 QUANTITY = 0.001
-INTERVAL = Client.KLINE_INTERVAL_15MINUTE
+INTERVAL = Client.KLINE_INTERVAL_5MINUTE  # Trading más rápido (cada 5 min)
 LOG_FILE = 'trading_log.csv'
 
 # --- Risk Management Parameters ---
@@ -488,7 +488,7 @@ def main():
             print("⚠️ Failed to fetch market data")
         
         # Wait for next cycle - synchronized with interval
-        wait_time = 900  # 15 minutes = 900 seconds for 15m interval
+        wait_time = 300  # 5 minutes = 300 seconds for 5m interval
         print(f"\n⏳ Waiting {wait_time//60} minutes for next cycle...")
         time.sleep(wait_time)
 
