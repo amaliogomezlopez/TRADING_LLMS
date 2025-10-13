@@ -16,6 +16,7 @@ Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combi
 - [Instalación](#-instalación)
 - [Configuración](#-configuración)
 - [Uso](#-uso)
+- [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
 - [Análisis de Resultados](#-análisis-de-resultados)
 - [Gestión de Riesgo](#️-gestión-de-riesgo)
 - [Roadmap](#-roadmap)
@@ -232,6 +233,51 @@ CYCLE #1 - 2025-10-13 14:30:00
 
 ⏳ Waiting 15 minutes for next cycle...
 ```
+
+---
+
+## 🆕 Comparación de Modelos LLM
+
+### 🤖 Sistema Multi-Modelo
+
+¿Quieres saber qué modelo LLM es mejor para trading? El sistema de comparación ejecuta **4 modelos simultáneamente** y calcula un consenso entre sus decisiones.
+
+### Modelos Incluidos
+
+1. **Llama-3.3-70B** (70B params) - El más inteligente
+2. **Llama-3.1-8B** (8B params) - El más rápido ⚡
+3. **Llama-4-Scout-17B** (17B params) - Última generación
+4. **Qwen3-32B** (32B params) - Arquitectura alternativa
+
+### Ejecutar Comparación
+
+```powershell
+# Iniciar comparación (ejecutar durante 24-48 horas)
+python model_comparison.py
+
+# Analizar resultados
+python analyze_models.py
+```
+
+### Métricas Analizadas
+
+- ✅ **Tiempo de respuesta** - Velocidad de decisión
+- ✅ **Distribución de señales** - BUY/SELL/HOLD %
+- ✅ **Acuerdo con consenso** - Qué modelo es más "mainstream"
+- ✅ **Agresividad** - Ratio de operaciones vs espera
+- ✅ **Unanimidad** - Ciclos donde todos coinciden
+- ✅ **Desacuerdos** - Casos de máxima divergencia
+
+### Datos Guardados
+
+Archivo: `model_comparison.csv`
+- Timestamp, precio, indicadores técnicos
+- Señal de cada modelo individual
+- Tiempo de respuesta de cada modelo
+- Consenso calculado
+- Nivel de acuerdo (%)
+
+**📖 Ver guía completa:** [MODEL_COMPARISON_GUIDE.md](MODEL_COMPARISON_GUIDE.md)
 
 ---
 
