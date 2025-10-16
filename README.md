@@ -17,6 +17,7 @@ Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combi
 - [Configuración](#-configuración)
 - [Uso](#-uso)
 - [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
+- [📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
 - [Análisis de Resultados](#-análisis-de-resultados)
 - [Gestión de Riesgo](#️-gestión-de-riesgo)
 - [Roadmap](#-roadmap)
@@ -278,6 +279,46 @@ Archivo: `model_comparison.csv`
 - Nivel de acuerdo (%)
 
 **📖 Ver guía completa:** [MODEL_COMPARISON_GUIDE.md](MODEL_COMPARISON_GUIDE.md)
+
+---
+
+## 📊 Notebook de Análisis Visual
+
+### 🎨 Análisis Interactivo con Jupyter
+
+Hemos creado un **notebook completo con 11 secciones de visualizaciones** para analizar los resultados:
+
+```bash
+# Instalar Jupyter (si no lo tienes)
+pip install jupyter plotly
+
+# Abrir notebook
+jupyter notebook model_analysis.ipynb
+
+# O en VS Code: abrir model_analysis.ipynb
+```
+
+### Visualizaciones Incluidas:
+
+1. **📊 Distribución de señales** - Gráficos de pastel por modelo
+2. **⚡ Tiempos de respuesta** - Box plots y estadísticas
+3. **🎯 Análisis de consenso** - Nivel de acuerdo entre modelos
+4. **📈 Evolución temporal** - Series de tiempo de señales
+5. **💰 Precio vs señales** - Efectividad de predicciones
+6. **🔍 Gráficos interactivos** - Plotly con hover y zoom
+7. **🔥 Heatmap de correlaciones** - Relaciones entre variables
+8. **🏆 Ranking final** - Radar charts y puntuaciones
+
+### Características del Notebook:
+
+- ✅ **11 secciones** con análisis completo
+- ✅ **Gráficos estáticos** (matplotlib/seaborn)
+- ✅ **Gráficos interactivos** (plotly)
+- ✅ **Estadísticas detalladas** por modelo
+- ✅ **Ranking multidimensional** con puntuación ponderada
+- ✅ **Recomendaciones automáticas** por objetivo
+
+**📖 Ver guía completa:** [NOTEBOOK_GUIDE.md](NOTEBOOK_GUIDE.md)
 
 ---
 
