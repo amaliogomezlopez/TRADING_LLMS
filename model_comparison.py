@@ -335,7 +335,7 @@ def calculate_consensus(signals):
 def main():
     """Main comparison function."""
     print("=" * 80)
-    print("🤖 TRADING BOT - MODEL COMPARISON")
+    print("[BOT] TRADING BOT - MODEL COMPARISON")
     print("=" * 80)
     print(f"Testing {len(MODELS_TO_TEST)} models simultaneously:")
     for i, model in enumerate(MODELS_TO_TEST, 1):
@@ -367,13 +367,13 @@ def main():
             if technical_data:
                 current_price = technical_data['current_price']
                 
-                print(f"\n📊 MARKET DATA:")
+                print(f"\n[DATA] MARKET DATA:")
                 print(f"   Price: ${current_price} ({technical_data['price_change']:+.2f}%)")
                 print(f"   RSI: {technical_data['rsi']} - {technical_data['rsi_signal']}")
                 print(f"   MACD: {technical_data['macd_signal']}")
                 print(f"   Trend: {technical_data['short_trend']} / {technical_data['medium_trend']}")
                 
-                print(f"\n🤖 MODEL PREDICTIONS:")
+                print(f"\n[MODELS] MODEL PREDICTIONS:")
                 print(f"{'Model':<25} {'Signal':<8} {'Response Time':<15}")
                 print("-" * 50)
                 
@@ -386,14 +386,14 @@ def main():
                     signals.append(signal)
                     
                     # Display result
-                    emoji = "✅" if signal == "BUY" else "❌" if signal == "SELL" else "⏸️" if signal == "HOLD" else "⚠️"
-                    print(f"{emoji} {model['display_name']:<23} {signal:<8} {response_time:.0f}ms")
+                    tag = "[BUY]" if signal == "BUY" else "[SELL]" if signal == "SELL" else "[HOLD]" if signal == "HOLD" else "[ERROR]"
+                    print(f"{tag} {model['display_name']:<23} {signal:<8} {response_time:.0f}ms")
                 
                 # Calculate consensus
                 consensus_signal, agreement_level = calculate_consensus(signals)
                 
                 print(f"\n{'='*50}")
-                print(f"📊 CONSENSUS: {consensus_signal} ({agreement_level}% agreement)")
+                print(f"[CONSENSUS] RESULT: {consensus_signal} ({agreement_level}% agreement)")
                 print(f"{'='*50}")
                 
                 # Log each model's result
@@ -419,13 +419,13 @@ def main():
                     }
                     log_comparison(log_data)
                 
-                print(f"\n✓ Results logged to {COMPARISON_LOG}")
+                print(f"\n[OK] Results logged to {COMPARISON_LOG}")
             else:
-                print("⚠️ Failed to calculate technical indicators")
+                print("[ERROR] Failed to calculate technical indicators")
         else:
-            print("⚠️ Failed to fetch market data")
+            print("[ERROR] Failed to fetch market data")
         
-        print(f"\n⏳ Waiting {WAIT_TIME//60} minutes for next cycle...")
+        print(f"\n[WAIT] Waiting {WAIT_TIME//60} minutes for next cycle...")
         time.sleep(WAIT_TIME)
 
 if __name__ == "__main__":

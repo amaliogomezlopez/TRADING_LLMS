@@ -17,7 +17,8 @@ Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combi
 - [Configuración](#-configuración)
 - [Uso](#-uso)
 - [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
-- [📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
+- [� V2: Sistema Optimizado](#-v2-sistema-optimizado)
+- [�📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
 - [Análisis de Resultados](#-análisis-de-resultados)
 - [Gestión de Riesgo](#️-gestión-de-riesgo)
 - [Roadmap](#-roadmap)
@@ -282,7 +283,67 @@ Archivo: `model_comparison.csv`
 
 ---
 
-## 📊 Notebook de Análisis Visual
+## � V2: Sistema Optimizado
+
+### 💎 Nueva Versión con Mejoras Significativas
+
+Hemos creado **`model_comparison_v2.py`** con mejoras sustanciales:
+
+#### 🤖 **Nuevos Modelos (4 diferentes a V1)**
+
+| Modelo | Parámetros | Descripción |
+|--------|------------|-------------|
+| **Qwen3-32B** | 32B | Ganador de V1 - Prudente |
+| **Llama-4-Maverick-17B** | 17B | Llama 4 Maverick (128e) |
+| **GPT-OSS-120B** | 120B | Modelo más grande |
+| **Kimi-K2** | MoonShot AI | Arquitectura alternativa |
+
+#### ✨ **Mejoras Implementadas**
+
+1. **🛡️ Gestión de Riesgo Avanzada**
+   - Stop-Loss: 2%
+   - Take-Profit: 4%
+   - Risk/Reward: 1:2
+   - Trailing Stop: 1.5%
+
+2. **📊 Indicadores Adicionales**
+   - Stochastic Oscillator
+   - ADX (Trend Strength)
+   - ATR (Volatility)
+   - OBV (Volume)
+   - 3 EMAs (9, 21, 50)
+
+3. **🎯 Sistema de Puntuación**
+   - Setup Score: 0-10 puntos
+   - Confidence Score: 0-100%
+   - Solo opera si confidence ≥75%
+
+4. **📖 Contexto Extendido**
+   - 8 secciones de análisis para LLMs
+   - 2x más información que V1
+   - Reglas de decisión claras
+
+#### 🚀 **Ejecutar V2**
+
+```bash
+python model_comparison_v2.py
+```
+
+**Genera:** `model_comparison_v2.csv`
+
+#### 📊 **Comparar V1 vs V2**
+
+```bash
+python compare_v1_v2.py
+```
+
+Genera gráficos comparativos y estadísticas.
+
+**📖 Ver guía completa:** [MODEL_COMPARISON_V2_GUIDE.md](MODEL_COMPARISON_V2_GUIDE.md)
+
+---
+
+## �📊 Notebook de Análisis Visual
 
 ### 🎨 Análisis Interactivo con Jupyter
 
