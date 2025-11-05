@@ -8,7 +8,7 @@ Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** 
 
 **Resultado sorprendente:** Un modelo ganó **+6.92%** con una sola operación, mientras otros hicieron cientos de trades y perdieron dinero.
 
-🎥 **[Ver video completo del experimento en YouTube](https://www.youtube.com/@AmalioMetria)**
+🎥 **[Ver video completo del experimento en YouTube](https://youtu.be/408Rty_qlrg)**
 
 ---
 
