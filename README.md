@@ -1,4 +1,4 @@
-# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial# 🤖 Trading con LLMs: Experimento con Inteligencia Artificial# 🤖 Trading con LLMs: Experimento de Trading Automatizado# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial# 🤖 Trading Bot with LLM & Technical Analysis
+# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial
 
 
 
