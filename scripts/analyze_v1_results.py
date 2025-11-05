@@ -1,16 +1,22 @@
 """
-Análisis detallado de resultados de model_comparison_v2.csv
+Análisis detallado de resultados del Experimento V1
+Autor: Amalio Gómez López
 """
 
 import pandas as pd
 import numpy as np
+import os
+
+# Obtener ruta del script y datos
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(script_dir, '..', 'data', 'model_comparison.csv')
 
 # Cargar datos
-df = pd.read_csv('model_comparison_v2.csv')
+df = pd.read_csv(data_path)
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 
 print("="*80)
-print("[ANÁLISIS] RESULTADOS DE MODEL_COMPARISON_V2.CSV")
+print("[ANÁLISIS] RESULTADOS DE MODEL_COMPARISON.CSV (V1)")
 print("="*80)
 
 # Estadísticas generales
@@ -120,8 +126,8 @@ for model, data in results.items():
     emoji = "[+]" if diff > 0 else "[-]" if diff < 0 else "[=]"
     print(f"{emoji} {model}: {data['roi']:+.2f}% ({status} que Hold: {diff:+.2f}pp)")
 
-# Análisis de por qué solo 2 modelos obtienen beneficios
-print(f"\n[ANÁLISIS] ¿Por qué solo Kimi y Qwen obtienen beneficios?")
+# Análisis de por qué algunos modelos pierden
+print(f"\n[ANÁLISIS] ¿Por qué algunos modelos pierden dinero?")
 print("="*80)
 
 # Verificar qué modelos compraron y cuándo
@@ -159,21 +165,6 @@ for model, data in results.items():
         print(f"    CONCLUSIÓN: Modelo igual que mercado")
     print()
 
-# Confidence Score
-if 'Confidence_Score' in df.columns:
-    print(f"\n[CONFIDENCE] Análisis de Confianza:")
-    print("="*80)
-    conf_data = df.groupby('Cycle').first()['Confidence_Score']
-    print(f"  Confidence Promedio: {conf_data.mean():.1f}%")
-    print(f"  Confidence Mediana: {conf_data.median():.1f}%")
-    print(f"  Mínimo: {conf_data.min():.1f}%")
-    print(f"  Máximo: {conf_data.max():.1f}%")
-    
-    high_conf = (conf_data >= 75).sum()
-    total_cycles = len(conf_data)
-    print(f"\n  Ciclos con Alta Confianza (≥75%): {high_conf}/{total_cycles} ({high_conf/total_cycles*100:.1f}%)")
-    print(f"  Ciclos con Baja Confianza (<75%): {total_cycles-high_conf}/{total_cycles} ({(total_cycles-high_conf)/total_cycles*100:.1f}%)")
-
 # Ranking final
 print(f"\n[RANKING] Mejores Modelos:")
 print("="*80)
@@ -185,7 +176,7 @@ for i, (model, data) in enumerate(sorted_models, 1):
     print(f"     ROI: {data['roi']:+.2f}% | Alpha: {alpha:+.2f}pp | Trades: {data['num_trades']}")
 
 print("\n" + "="*80)
-print("[CONCLUSIÓN] RESUMEN EJECUTIVO")
+print("[CONCLUSIÓN] RESUMEN EJECUTIVO V1")
 print("="*80)
 
 best_model = sorted_models[0][0]
@@ -213,5 +204,20 @@ else:
     else:
         print(f"  → Causa: Decisiones pobres de los modelos")
         print(f"  → Ajustar prompts o parámetros")
+
+# Análisis de Agreement Level
+print(f"\n[CONSENSUS] Análisis de Agreement Level:")
+print("="*80)
+if 'Agreement_Level' in df.columns:
+    agreement_data = df.groupby('Cycle').first()['Agreement_Level']
+    print(f"  Agreement Promedio: {agreement_data.mean():.1f}%")
+    print(f"  Agreement Mediana: {agreement_data.median():.1f}%")
+    print(f"  Mínimo: {agreement_data.min():.1f}%")
+    print(f"  Máximo: {agreement_data.max():.1f}%")
+    
+    high_agreement = (agreement_data == 100).sum()
+    total_cycles = len(agreement_data)
+    print(f"\n  Ciclos con Consenso Total (100%): {high_agreement}/{total_cycles} ({high_agreement/total_cycles*100:.1f}%)")
+    print(f"  Ciclos con Desacuerdo: {total_cycles-high_agreement}/{total_cycles} ({(total_cycles-high_agreement)/total_cycles*100:.1f}%)")
 
 print("\n" + "="*80)

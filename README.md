@@ -1,308 +1,900 @@
-# 🤖 Trading Bot with LLM & Technical Analysis
+# 🤖 Trading con LLMs: Experimento de Trading Automatizado# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial# 🤖 Trading Bot with LLM & Technical Analysis
 
-Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combinado con **análisis técnico avanzado** para tomar decisiones de compra/venta en el mercado de criptomonedas. El bot opera en la **testnet de Binance** para pruebas sin riesgo real.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Active-success.svg)
+
+[![YouTube Channel](https://img.shields.io/badge/YouTube-AmalioMetria-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@AmalioMetria)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)[![YouTube Channel](https://img.shields.io/badge/YouTube-AmalioMetria-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@AmalioMetria)Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combinado con **análisis técnico avanzado** para tomar decisiones de compra/venta en el mercado de criptomonedas. El bot opera en la **testnet de Binance** para pruebas sin riesgo real.
+
+
+
+## 📖 Sobre el Proyecto[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron 12 indicadores técnicos y tomaron decisiones de compra/venta cada 5 minutos.[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+
+
+
+**Resultado sorprendente:** Un modelo ganó **+6.92%** con una sola operación, mientras otros hicieron cientos de trades y perdieron dinero.![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+
+
+🎥 **[Ver video completo en YouTube](https://www.youtube.com/@AmalioMetria)**## 📖 Descripción del Proyecto![Status](https://img.shields.io/badge/Status-Active-success.svg)
+
+
 
 ---
 
-## 📋 Tabla de Contenidos
 
-- [Características](#-características)
+
+## 🎯 ObjetivosExperimento real de trading automatizado donde **8 modelos de lenguaje grandes (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron indicadores técnicos y tomaron decisiones de compra/venta en tiempo real.---
+
+
+
+- Evaluar la capacidad de diferentes LLMs para tomar decisiones de trading
+
+- Comparar estrategias conservadoras vs activas
+
+- Medir el valor añadido real (Alpha) de cada modelo**Resultados sorprendentes:** Un modelo ganó **+6.92%** realizando una sola operación, mientras otros realizaron cientos de trades y perdieron dinero.## 📋 Tabla de Contenidos
+
+- Demostrar que cantidad de operaciones ≠ beneficios
+
+
+
+---
+
+🎥 **[Ver video completo del experimento en YouTube](https://www.youtube.com/@AmalioMetria)**- [Características](#-características)
+
+## 📊 Experimentos
+
 - [Arquitectura](#-arquitectura)
-- [Tecnologías](#-tecnologías)
-- [Instalación](#-instalación)
-- [Configuración](#-configuración)
-- [Uso](#-uso)
-- [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
-- [� V2: Sistema Optimizado](#-v2-sistema-optimizado)
-- [�📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
-- [Análisis de Resultados](#-análisis-de-resultados)
+
+### Experimento V1 (13 días: 13-26 Oct 2025)
+
+- **Mercado:** LATERAL (-0.25%)---- [Tecnologías](#-tecnologías)
+
+- **Modelos:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B
+
+- **Ganador:** 🥇 **Qwen3-32B** (+6.92% ROI, +7.17pp Alpha)- [Instalación](#-instalación)
+
+- **Estrategia:** 1 operación en el momento perfecto
+
+## 🎯 Objetivos del Experimento- [Configuración](#-configuración)
+
+### Experimento V2 (7 días: 19-26 Oct 2025)
+
+- **Mercado:** ALCISTA (+4.79%)- [Uso](#-uso)
+
+- **Modelos:** Qwen3-32B, Llama-4-Maverick-17B, GPT-OSS-120B, Kimi-K2
+
+- **Ganador:** 🥇 **Kimi-K2** (+7.73% ROI, +2.93pp Alpha)- **Evaluar** la capacidad de diferentes LLMs para tomar decisiones de trading- [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
+
+- **Estrategia:** Trading activo selectivo con gestión de riesgo
+
+- **Comparar** estrategias conservadoras vs activas- [� V2: Sistema Optimizado](#-v2-sistema-optimizado)
+
+---
+
+- **Medir** el valor añadido real (Alpha) de cada modelo- [�📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
+
+## 🏆 Resultados
+
+- **Demostrar** que más operaciones ≠ más beneficios- [Análisis de Resultados](#-análisis-de-resultados)
+
+### Ranking por Alpha (Valor Añadido Real)
+
 - [Gestión de Riesgo](#️-gestión-de-riesgo)
-- [Roadmap](#-roadmap)
-- [Contribuciones](#-contribuciones)
-- [Disclaimer](#-disclaimer)
 
----
+| Pos | Modelo | Exp | ROI | Alpha | Trades |
 
-## ✨ Características
+|-----|--------|-----|-----|-------|--------|---- [Roadmap](#-roadmap)
 
-### 🧠 Inteligencia Artificial
-- **LLM (Groq/Llama 3.1)**: Analiza datos técnicos y toma decisiones de trading
-- **Prompt Engineering**: Contexto técnico enriquecido para decisiones informadas
-- **Validación de señales**: Múltiples confirmaciones antes de ejecutar operaciones
+| 🥇 | Qwen3-32B | V1 | +6.92% | **+7.17pp** | 1 |
 
-### 📊 Análisis Técnico Completo
-- **RSI (Relative Strength Index)**: Detecta condiciones de sobrecompra/sobreventa
-- **MACD**: Identifica cambios de momentum y tendencias
-- **EMAs (9 y 21)**: Análisis de tendencias de corto y medio plazo
-- **Bollinger Bands**: Medición de volatilidad y niveles extremos
+| 🥈 | Kimi-K2 | V2 | +7.73% | **+2.93pp** | 11 |- [Contribuciones](#-contribuciones)
 
-### 🛡️ Gestión de Riesgo Avanzada
-- **Stop Loss Automático**: Protección del 2% en cada posición
-- **Take Profit Automático**: Objetivo del 3% por operación
-- **Límite de Pérdidas Totales**: El bot se detiene si las pérdidas superan el umbral
-- **Risk/Reward**: Ratio de 1.5:1 (3% ganancia / 2% pérdida)
+| 🥉 | Llama-3.3-70B | V1 | +1.66% | +1.91pp | 313 |
 
-### 📈 Monitoreo y Análisis
-- **Logging Detallado**: Registro CSV con todas las operaciones e indicadores
-- **Script de Análisis**: Estadísticas de performance, win rate, P&L
-- **Tracking en Tiempo Real**: Visualización de P&L realizado y no realizado
+| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |## 📊 Experimentos Realizados- [Disclaimer](#-disclaimer)
 
----
+| 5º | Llama-4-Scout-17B | V1 | -2.71% | -2.46pp | 179 |
 
-## 🏗️ Arquitectura
+| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |
+
+| 7º | Llama-4-Maverick | V2 | 0.00% | -4.79pp | 0 |
+
+| 8º | GPT-OSS-120B | V2 | 0.00% | -4.79pp | 0 |### **Experimento V1** (13 días: 13-26 Octubre 2025)---
+
+
+
+### 💡 Lecciones Aprendidas- **Mercado:** LATERAL (-0.25%)
+
+
+
+1. **Timing > Frecuencia** - 1 operación perfecta > 273 mediocres- **Modelos:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B## ✨ Características
+
+2. **Menos es Más** - Over-trading destruye beneficios
+
+3. **Alpha es crucial** - Mide el valor real sobre el mercado- **Ganador:** 🥇 **Qwen3-32B** (+6.92% ROI, +7.17pp Alpha)
+
+4. **Contexto importa** - Modelos diferentes para mercados diferentes
+
+5. **No todas las IAs funcionan** - Solo 2 de 8 fueron rentables- **Estrategia ganadora:** 1 sola operación en el momento perfecto### 🧠 Inteligencia Artificial
+
+
+
+---- **LLM (Groq/Llama 3.1)**: Analiza datos técnicos y toma decisiones de trading
+
+
+
+## 🔬 Metodología### **Experimento V2** (7 días: 19-26 Octubre 2025)- **Prompt Engineering**: Contexto técnico enriquecido para decisiones informadas
+
+
+
+### Indicadores Técnicos- **Mercado:** ALCISTA (+4.79%)- **Validación de señales**: Múltiples confirmaciones antes de ejecutar operaciones
+
+- RSI (Relative Strength Index)
+
+- MACD (Moving Average Convergence Divergence)- **Modelos:** Qwen3-32B, Llama-4-Maverick-17B, GPT-OSS-120B, Kimi-K2
+
+- EMA (9, 21, 50, 200 periodos)
+
+- ADX (Average Directional Index)- **Ganador:** 🥇 **Kimi-K2** (+7.73% ROI, +2.93pp Alpha)### 📊 Análisis Técnico Completo
+
+- Bandas de Bollinger
+
+- Análisis de volumen y tendencias- **Estrategia ganadora:** Trading activo selectivo con gestión de riesgo- **RSI (Relative Strength Index)**: Detecta condiciones de sobrecompra/sobreventa
+
+
+
+### Parámetros- **MACD**: Identifica cambios de momentum y tendencias
+
+- **Frecuencia:** Cada 5 minutos
+
+- **Capital inicial:** $10,000 USD (virtual)---- **EMAs (9 y 21)**: Análisis de tendencias de corto y medio plazo
+
+- **Tipo:** SPOT (sin apalancamiento)
+
+- **Stop-loss (V2):** 2%- **Bollinger Bands**: Medición de volatilidad y niveles extremos
+
+- **Take-profit (V2):** 4%
+
+- **Umbral confianza (V2):** 75%## 🏆 Resultados Principales
+
+
+
+### Cálculo de Alpha### 🛡️ Gestión de Riesgo Avanzada
 
 ```
-┌─────────────────┐
-│  Binance API    │ ← Datos de mercado (OHLCV)
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│  Technical Analysis Engine  │
+
+Alpha = ROI del Modelo - ROI del Mercado### Ranking por Alpha (Valor Añadido Real)- **Stop Loss Automático**: Protección del 2% en cada posición
+
+
+
+Ejemplo (Qwen V1):- **Take Profit Automático**: Objetivo del 3% por operación
+
+  ROI Modelo: +6.92%
+
+  ROI Mercado: -0.25%| Posición | Modelo | Experimento | ROI | Alpha | Trades |- **Límite de Pérdidas Totales**: El bot se detiene si las pérdidas superan el umbral
+
+  Alpha: +7.17pp ← Valor puro
+
+```|----------|--------|-------------|-----|-------|--------|- **Risk/Reward**: Ratio de 1.5:1 (3% ganancia / 2% pérdida)
+
+
+
+---| 🥇 1º | Qwen3-32B | V1 | +6.92% | **+7.17pp** | 1 |
+
+
+
+## 📁 Estructura| 🥈 2º | Kimi-K2 | V2 | +7.73% | **+2.93pp** | 11 |### 📈 Monitoreo y Análisis
+
+
+
+```| 🥉 3º | Llama-3.3-70B | V1 | +1.66% | +1.91pp | 313 |- **Logging Detallado**: Registro CSV con todas las operaciones e indicadores
+
+📦 TRADING_AI
+
+├── 📄 README.md| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |- **Script de Análisis**: Estadísticas de performance, win rate, P&L
+
+├── 📄 LICENSE
+
+├── 📄 requirements.txt| 5º | Llama-4-Scout-17B | V1 | -2.71% | -2.46pp | 179 |- **Tracking en Tiempo Real**: Visualización de P&L realizado y no realizado
+
+├── 📄 .env.example
+
+├── 📄 config.example.yml| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |
+
+│
+
+├── 📊 data/| 7º | Llama-4-Maverick-17B | V2 | 0.00% | -4.79pp | 0 |---
+
+│   ├── model_comparison.csv        # Datos V1
+
+│   ├── model_comparison_v2.csv     # Datos V2| 8º | GPT-OSS-120B | V2 | 0.00% | -4.79pp | 0 |
+
+│   └── trading_log.csv
+
+│## 🏗️ Arquitectura
+
+├── 🔬 scripts/
+
+│   ├── analyze_v1_results.py### 💡 Lecciones Clave
+
+│   ├── analyze_v2_results.py
+
+│   ├── model_comparison.py         # Sistema V1```
+
+│   ├── model_comparison_v2.py      # Sistema V2
+
+│   ├── trading_bot.py1. **Timing > Frecuencia:** 1 operación perfecta supera a 273 operaciones mediocres┌─────────────────┐
+
+│   └── manage_logs.py
+
+│2. **Menos es Más:** El over-trading destruye beneficios│  Binance API    │ ← Datos de mercado (OHLCV)
+
+├── 📓 notebooks/
+
+│   ├── model_analysis_v1.ipynb3. **Alpha es lo que importa:** Mide el valor real añadido por encima del mercado└────────┬────────┘
+
+│   └── model_analysis_v2.ipynb
+
+│4. **Contexto es crítico:** Diferentes modelos brillan en diferentes condiciones de mercado         │
+
+└── 📖 docs/
+
+    ├── ANALISIS_RESULTADOS_V1.md5. **No todas las IAs sirven:** 2 de 8 modelos generaron beneficios significativos         ▼
+
+    ├── ANALISIS_RESULTADOS_V2.md
+
+    └── COMPARACION_V1_V2.md┌─────────────────────────────┐
+
+```
+
+---│  Technical Analysis Engine  │
+
+---
+
 │  • RSI, MACD, EMAs, BB     │
-│  • Trend Detection          │
-│  • Signal Validation        │
-└────────┬────────────────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│      LLM (Groq API)         │
-│  • Contextual Analysis      │
-│  • Decision Making          │
+
+## 🚀 Instalación
+
+## 🔬 Metodología│  • Trend Detection          │
+
+### Requisitos
+
+- Python 3.12+│  • Signal Validation        │
+
+- Cuenta en OpenRouter
+
+- Cuenta en CoinGecko### Indicadores Técnicos Utilizados└────────┬────────────────────┘
+
+
+
+### Setup- **RSI** (Relative Strength Index)         │
+
+
+
+```bash- **MACD** (Moving Average Convergence Divergence)         ▼
+
+# Clonar repositorio
+
+git clone https://github.com/amaliogomezlopez/TRADING_LLMS.git- **EMA** (Exponential Moving Averages: 9, 21, 50, 200)┌─────────────────────────────┐
+
+cd TRADING_LLMS
+
+- **ADX** (Average Directional Index)│      LLM (Groq API)         │
+
+# Crear entorno virtual
+
+python -m venv .venv- **Bandas de Bollinger**│  • Contextual Analysis      │
+
+
+
+# Activar entorno (Windows)- **Volumen** y análisis de tendencias│  • Decision Making          │
+
+.venv\Scripts\activate
+
 │  • BUY / SELL / HOLD        │
-└────────┬────────────────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│   Risk Management Module    │
-│  • Stop Loss / Take Profit  │
-│  • Position Sizing          │
-│  • Max Loss Limit           │
-└────────┬────────────────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│    Order Execution          │
-│  (Binance Testnet)          │
-└─────────────────────────────┘
-         │
-         ▼
-┌─────────────────────────────┐
-│    Logging & Analysis       │
-│  • CSV Logs                 │
-│  • Performance Metrics      │
-└─────────────────────────────┘
-```
+
+# Activar entorno (Linux/Mac)
+
+source .venv/bin/activate### Sistema de Trading└────────┬────────────────────┘
+
+
+
+# Instalar dependencias- **Frecuencia:** Análisis cada 5 minutos         │
+
+pip install -r requirements.txt
+
+- **Capital inicial:** $10,000 USD (virtual)         ▼
+
+# Configurar API keys
+
+cp .env.example .env- **Tipo:** Trading SPOT (sin apalancamiento)┌─────────────────────────────┐
+
+# Editar .env con tus keys
+
+```- **Gestión de riesgo (V2):** Stop-loss 2%, Take-profit 4%│   Risk Management Module    │
+
+
+
+---- **Umbral de confianza (V2):** Mínimo 75% para operar│  • Stop Loss / Take Profit  │
+
+
+
+## 📈 Uso│  • Position Sizing          │
+
+
+
+### Analizar Resultados### Cálculo de Alpha│  • Max Loss Limit           │
+
+
+
+```bash```└────────┬────────────────────┘
+
+# Análisis V1
+
+python scripts/analyze_v1_results.pyAlpha = ROI del Modelo - ROI del Mercado         │
+
+
+
+# Análisis V2         ▼
+
+python scripts/analyze_v2_results.py
+
+Ejemplo (Qwen V1):┌─────────────────────────────┐
+
+# Notebooks interactivos
+
+jupyter notebook notebooks/model_analysis_v1.ipynbROI Modelo: +6.92%│    Order Execution          │
+
+jupyter notebook notebooks/model_analysis_v2.ipynb
+
+```ROI Mercado: -0.25%│  (Binance Testnet)          │
+
+
+
+### Trading BotAlpha: +7.17pp ← Valor añadido puro└─────────────────────────────┘
+
+
+
+⚠️ **Solo usar con dinero virtual o que puedas permitirte perder**```         │
+
+
+
+```bash         ▼
+
+python scripts/trading_bot.py
+
+```---┌─────────────────────────────┐
+
+
+
+---│    Logging & Analysis       │
+
+
+
+## 📊 Visualizaciones## 📁 Estructura del Proyecto│  • CSV Logs                 │
+
+
+
+Los notebooks incluyen:│  • Performance Metrics      │
+
+
+
+- 📈 Evolución del portafolio```└─────────────────────────────┘
+
+- 💰 Comparación con Buy & Hold
+
+- 📉 Análisis de Alpha📦 TRADING_AI```
+
+- 🎯 Distribución de señales
+
+- ⏱️ Tiempos de respuesta├── 📄 README.md                          # Este archivo
+
+- 🔄 Frecuencia de operaciones
+
+├── 📄 LICENSE                            # Licencia MIT---
 
 ---
+
+├── 📄 requirements.txt                   # Dependencias Python
+
+## ⚠️ Disclaimer
+
+├── 📄 .env.example                       # Ejemplo de configuración## 🛠️ Tecnologías
+
+> **SOLO FINES EDUCATIVOS**
+
+├── 📄 .gitignore                         # Archivos ignorados por Git
+
+- ❌ NO es asesoramiento financiero
+
+- ❌ NO garantiza beneficios│### Core
+
+- ❌ Resultados pasados ≠ futuros
+
+- ❌ Trading de cripto es MUY arriesgado├── 📊 DATOS Y RESULTADOS- **Python 3.8+**: Lenguaje principal
+
+- ❌ Puedes perder TODO tu capital
+
+│   ├── model_comparison.csv              # Datos completos Experimento V1- **python-binance**: Integración con Binance API
+
+**Consulta un asesor financiero antes de invertir.**
+
+│   ├── model_comparison_v2.csv           # Datos completos Experimento V2- **groq**: Cliente para LLM (Llama 3.1)
+
+---
+
+│   └── trading_log.csv                   # Registro de operaciones- **python-dotenv**: Gestión de variables de entorno
 
 ## 🛠️ Tecnologías
 
-### Core
-- **Python 3.8+**: Lenguaje principal
-- **python-binance**: Integración con Binance API
-- **groq**: Cliente para LLM (Llama 3.1)
-- **python-dotenv**: Gestión de variables de entorno
+│
 
-### Análisis Técnico
-- **ta (Technical Analysis Library)**: Cálculo de indicadores
-- **pandas**: Manipulación de datos de series temporales
-- **numpy**: Operaciones numéricas
+- Python 3.12
 
-### APIs
-- **Binance Testnet**: Simulación de trading sin riesgo
-- **Groq API**: Acceso a modelos LLM de alta velocidad
+- OpenRouter (acceso a LLMs)├── 🔬 SCRIPTS DE ANÁLISIS### Análisis Técnico
+
+- CoinGecko API
+
+- Pandas, NumPy│   ├── analyze_v1_results.py             # Análisis detallado V1- **ta (Technical Analysis Library)**: Cálculo de indicadores
+
+- Matplotlib, Seaborn
+
+- Jupyter Notebooks│   ├── analyze_v2_results.py             # Análisis detallado V2- **pandas**: Manipulación de datos de series temporales
+
+- TA-Lib
+
+│   ├── model_comparison.py               # Sistema trading V1- **numpy**: Operaciones numéricas
 
 ---
 
-## 📦 Instalación
+│   └── model_comparison_v2.py            # Sistema trading V2 (mejorado)
 
-### 1. Clonar el repositorio
+## 📄 Licencia
 
-```bash
-git clone https://github.com/amaliogomezlopez/TRADING_LLMS.git
-cd TRADING_LLMS
-```
+│### APIs
 
-### 2. Crear entorno virtual
+MIT License - Ver [LICENSE](LICENSE)
+
+├── 📓 NOTEBOOKS INTERACTIVOS- **Binance Testnet**: Simulación de trading sin riesgo
+
+---
+
+│   ├── model_analysis_v1.ipynb           # Visualizaciones V1- **Groq API**: Acceso a modelos LLM de alta velocidad
+
+## 🤝 Contribuir
+
+│   └── model_analysis_v2.ipynb           # Visualizaciones V2
+
+1. Fork el proyecto
+
+2. Crea tu rama (`git checkout -b feature/Feature`)│---
+
+3. Commit cambios (`git commit -m 'Add Feature'`)
+
+4. Push (`git push origin feature/Feature`)├── 📖 DOCUMENTACIÓN
+
+5. Abre Pull Request
+
+│   ├── ANALISIS_RESULTADOS_V1.md         # Análisis completo V1## 📦 Instalación
+
+---
+
+│   ├── ANALISIS_RESULTADOS_V2.md         # Análisis completo V2
+
+## 📬 Contacto
+
+│   └── COMPARACION_V1_V2.md              # Comparación entre versiones### 1. Clonar el repositorio
+
+**Amalio Gómez López**
+
+│
+
+- 🎥 YouTube: [@AmalioMetria](https://www.youtube.com/@AmalioMetria)
+
+- 💻 GitHub: [@amaliogomezlopez](https://github.com/amaliogomezlopez)└── 🛠️ UTILIDADES```bash
+
+
+
+---    ├── trading_bot.py                    # Bot de trading en tiempo realgit clone https://github.com/amaliogomezlopez/TRADING_LLMS.git
+
+
+
+## 📊 Stats del Proyecto    ├── manage_logs.py                    # Gestión de logscd TRADING_LLMS
+
+
+
+- **Duración:** 20 días    └── config.example.yml                # Configuración del sistema```
+
+- **Datos:** +20,000 registros
+
+- **Ciclos:** 4,932```
+
+- **Modelos:** 8 LLMs
+
+- **Código:** +2,000 líneas### 2. Crear entorno virtual
+
+- **Indicadores:** 12
+
+---
+
+---
 
 **Windows:**
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+
+## 🔮 Próximos Pasos
+
+## 🚀 Instalación y Uso```powershell
+
+- [ ] Detección automática tipo de mercado
+
+- [ ] Sistema híbrido adaptativopython -m venv .venv
+
+- [ ] Backtesting histórico extenso
+
+- [ ] Integración más exchanges### Requisitos Previos.\.venv\Scripts\Activate.ps1
+
+- [ ] Dashboard tiempo real
+
+- [ ] Análisis sentimiento social- Python 3.12 o superior```
+
+
+
+---- Cuenta en OpenRouter (para acceso a LLMs)
+
+
+
+<div align="center">- Cuenta en CoinGecko (para datos de mercado)**Linux/Mac:**
+
+
+
+**⭐ Si te gusta este proyecto, dale una estrella ⭐**```bash
+
+
+
+**🎥 [Suscríbete en YouTube](https://www.youtube.com/@AmalioMetria) para más experimentos con IA**### Instalaciónpython3 -m venv .venv
+
+
+
+---source .venv/bin/activate
+
+
+
+*Desarrollado con ❤️ por Amalio Gómez López*```bash```
+
+
+
+</div># 1. Clonar el repositorio
+
+
+git clone https://github.com/amaliogomezlopez/TRADING_LLMS.git### 3. Instalar dependencias
+
+cd TRADING_LLMS
+
+```bash
+
+# 2. Crear entorno virtualpip install python-binance groq python-dotenv ta pandas numpy
+
+python -m venv .venv```
+
+
+
+# 3. Activar entorno virtual---
+
+# En Windows:
+
+.venv\Scripts\activate## ⚙️ Configuración
+
+# En Linux/Mac:
+
+source .venv/bin/activate### 1. Variables de Entorno
+
+
+
+# 4. Instalar dependenciasCrea un archivo `.env` en la raíz del proyecto:
+
+pip install -r requirements.txt
+
+```env
+
+# 5. Configurar variables de entorno# Binance Testnet API Keys
+
+cp .env.example .envBINANCE_API_KEY=tu_testnet_api_key_aqui
+
+# Editar .env con tus API keysBINANCE_API_SECRET=tu_testnet_secret_key_aqui
+
 ```
 
-**Linux/Mac:**
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
+# Groq API Key
+
+### ConfiguraciónGROQ_API_KEY=tu_groq_api_key_aqui
+
 ```
 
-### 3. Instalar dependencias
+Edita el archivo `.env` con tus credenciales:
 
-```bash
-pip install python-binance groq python-dotenv ta pandas numpy
+> **📝 Nota**: 
+
+```env> - Obtén tus credenciales de Binance Testnet en: [testnet.binance.vision](https://testnet.binance.vision/)
+
+OPENROUTER_API_KEY=tu_api_key_aqui> - Obtén tu API key de Groq en: [console.groq.com](https://console.groq.com/)
+
+COINGECKO_API_KEY=tu_api_key_aqui
+
+```### 2. Parámetros de Trading
+
+
+
+### Ejecutar AnálisisEdita `trading_bot.py` para ajustar los parámetros según tu estrategia:
+
+
+
+```bash```python
+
+# Analizar resultados V1# Trading Parameters
+
+python analyze_v1_results.pySYMBOL = 'BTCUSDT'              # Par de trading
+
+QUANTITY = 0.001                 # Cantidad por operación
+
+# Analizar resultados V2INTERVAL = Client.KLINE_INTERVAL_15MINUTE  # Timeframe
+
+python analyze_v2_results.py
+
+# Risk Management
+
+# Ejecutar notebooks interactivosSTOP_LOSS_PERCENT = 0.02        # 2% stop loss
+
+jupyter notebook model_analysis_v1.ipynbTAKE_PROFIT_PERCENT = 0.03      # 3% take profit
+
+jupyter notebook model_analysis_v2.ipynbMAX_TOTAL_LOSS = -100.0         # Pérdida máxima en USDT
+
+```
+
+# Technical Indicators
+
+### Ejecutar Trading Bot (Modo Real)RSI_PERIOD = 14
+
+RSI_OVERSOLD = 30               # Umbral de sobreventa
+
+⚠️ **ADVERTENCIA:** Usa solo con dinero virtual o cantidades que puedas permitirte perder.RSI_OVERBOUGHT = 70             # Umbral de sobrecompra
+
+EMA_SHORT = 9
+
+```bashEMA_LONG = 21
+
+python trading_bot.py```
+
 ```
 
 ---
-
-## ⚙️ Configuración
-
-### 1. Variables de Entorno
-
-Crea un archivo `.env` en la raíz del proyecto:
-
-```env
-# Binance Testnet API Keys
-BINANCE_API_KEY=tu_testnet_api_key_aqui
-BINANCE_API_SECRET=tu_testnet_secret_key_aqui
-
-# Groq API Key
-GROQ_API_KEY=tu_groq_api_key_aqui
-```
-
-> **📝 Nota**: 
-> - Obtén tus credenciales de Binance Testnet en: [testnet.binance.vision](https://testnet.binance.vision/)
-> - Obtén tu API key de Groq en: [console.groq.com](https://console.groq.com/)
-
-### 2. Parámetros de Trading
-
-Edita `trading_bot.py` para ajustar los parámetros según tu estrategia:
-
-```python
-# Trading Parameters
-SYMBOL = 'BTCUSDT'              # Par de trading
-QUANTITY = 0.001                 # Cantidad por operación
-INTERVAL = Client.KLINE_INTERVAL_15MINUTE  # Timeframe
-
-# Risk Management
-STOP_LOSS_PERCENT = 0.02        # 2% stop loss
-TAKE_PROFIT_PERCENT = 0.03      # 3% take profit
-MAX_TOTAL_LOSS = -100.0         # Pérdida máxima en USDT
-
-# Technical Indicators
-RSI_PERIOD = 14
-RSI_OVERSOLD = 30               # Umbral de sobreventa
-RSI_OVERBOUGHT = 70             # Umbral de sobrecompra
-EMA_SHORT = 9
-EMA_LONG = 21
-```
 
 ---
 
 ## 🚀 Uso
 
+## 📈 Visualizaciones
+
 ### Ejecutar el Bot
 
+Los notebooks incluyen gráficos interactivos para:
+
 ```bash
-python trading_bot.py
-```
 
-El bot mostrará información en tiempo real:
+- 📊 Evolución del portafolio en el tiempopython trading_bot.py
 
-```
+- 💰 Comparación con estrategia Buy & Hold```
+
+- 📉 Análisis de Alpha por modelo
+
+- 🎯 Distribución de señales de tradingEl bot mostrará información en tiempo real:
+
+- ⏱️ Tiempos de respuesta de los modelos
+
+- 🔄 Frecuencia de operaciones```
+
 ============================================================
-ADVANCED TRADING BOT WITH TECHNICAL ANALYSIS
+
+---ADVANCED TRADING BOT WITH TECHNICAL ANALYSIS
+
 ============================================================
-Symbol: BTCUSDT
+
+## ⚠️ Disclaimer ImportanteSymbol: BTCUSDT
+
 Interval: 15m
-Stop Loss: 2.0%
+
+> **ESTE PROYECTO ES EXCLUSIVAMENTE CON FINES EDUCATIVOS Y DE INVESTIGACIÓN.**Stop Loss: 2.0%
+
 Take Profit: 3.0%
-Max Total Loss: $-100.0
-============================================================
+
+- ❌ **NO es asesoramiento financiero**Max Total Loss: $-100.0
+
+- ❌ **NO garantiza beneficios**============================================================
+
+- ❌ Los resultados pasados NO garantizan resultados futuros
+
+- ❌ El trading de criptomonedas es **extremadamente arriesgoso**============================================================
+
+- ❌ Puedes **perder todo tu capital**CYCLE #1 - 2025-10-13 14:30:00
 
 ============================================================
-CYCLE #1 - 2025-10-13 14:30:00
-============================================================
-✓ Market data fetched: 100 candles
 
-📊 TECHNICAL ANALYSIS:
+**Siempre consulta con un asesor financiero profesional antes de invertir dinero real.**✓ Market data fetched: 100 candles
+
+
+
+---📊 TECHNICAL ANALYSIS:
+
    Price: $62,450 (+2.5%)
-   RSI: 45 - NEUTRAL
+
+## 🛠️ Tecnologías Utilizadas   RSI: 45 - NEUTRAL
+
    MACD: BULLISH (Above signal line)
-   Trend: BULLISH (short) / BULLISH (medium)
-   EMA: Price is ABOVE EMA9, ABOVE EMA21
 
-🤖 LLM DECISION: BUY
+- **Python 3.12** - Lenguaje principal   Trend: BULLISH (short) / BULLISH (medium)
 
-✅ BUY EXECUTED at $62,450.00
-   Stop Loss: $61,201.00
-   Take Profit: $64,323.50
+- **OpenRouter** - API para acceso a múltiples LLMs   EMA: Price is ABOVE EMA9, ABOVE EMA21
 
-⏳ Waiting 15 minutes for next cycle...
+- **CoinGecko API** - Datos de mercado en tiempo real
+
+- **Pandas** - Análisis de datos🤖 LLM DECISION: BUY
+
+- **NumPy** - Cálculos numéricos
+
+- **Matplotlib/Seaborn** - Visualizaciones✅ BUY EXECUTED at $62,450.00
+
+- **Jupyter Notebooks** - Análisis interactivo   Stop Loss: $61,201.00
+
+- **TA-Lib** - Indicadores técnicos   Take Profit: $64,323.50
+
+
+
+---⏳ Waiting 15 minutes for next cycle...
+
 ```
+
+## 📄 Licencia
 
 ---
+
+Este proyecto está bajo la licencia MIT. Ver archivo [LICENSE](LICENSE) para más detalles.
 
 ## 🆕 Comparación de Modelos LLM
 
+---
+
 ### 🤖 Sistema Multi-Modelo
+
+## 🤝 Contribuciones
 
 ¿Quieres saber qué modelo LLM es mejor para trading? El sistema de comparación ejecuta **4 modelos simultáneamente** y calcula un consenso entre sus decisiones.
 
+Las contribuciones son bienvenidas. Por favor:
+
 ### Modelos Incluidos
 
-1. **Llama-3.3-70B** (70B params) - El más inteligente
-2. **Llama-3.1-8B** (8B params) - El más rápido ⚡
-3. **Llama-4-Scout-17B** (17B params) - Última generación
-4. **Qwen3-32B** (32B params) - Arquitectura alternativa
+1. Fork el proyecto
 
-### Ejecutar Comparación
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)1. **Llama-3.3-70B** (70B params) - El más inteligente
 
-```powershell
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)2. **Llama-3.1-8B** (8B params) - El más rápido ⚡
+
+4. Push a la rama (`git push origin feature/AmazingFeature`)3. **Llama-4-Scout-17B** (17B params) - Última generación
+
+5. Abre un Pull Request4. **Qwen3-32B** (32B params) - Arquitectura alternativa
+
+
+
+---### Ejecutar Comparación
+
+
+
+## 📬 Contacto```powershell
+
 # Iniciar comparación (ejecutar durante 24-48 horas)
-python model_comparison.py
 
-# Analizar resultados
-python analyze_models.py
+**Amalio Gómez López**python model_comparison.py
+
+
+
+- 🎥 YouTube: [@AmalioMetria](https://www.youtube.com/@AmalioMetria)# Analizar resultados
+
+- 💻 GitHub: [@amaliogomezlopez](https://github.com/amaliogomezlopez)python analyze_models.py
+
 ```
-
-### Métricas Analizadas
-
-- ✅ **Tiempo de respuesta** - Velocidad de decisión
-- ✅ **Distribución de señales** - BUY/SELL/HOLD %
-- ✅ **Acuerdo con consenso** - Qué modelo es más "mainstream"
-- ✅ **Agresividad** - Ratio de operaciones vs espera
-- ✅ **Unanimidad** - Ciclos donde todos coinciden
-- ✅ **Desacuerdos** - Casos de máxima divergencia
-
-### Datos Guardados
-
-Archivo: `model_comparison.csv`
-- Timestamp, precio, indicadores técnicos
-- Señal de cada modelo individual
-- Tiempo de respuesta de cada modelo
-- Consenso calculado
-- Nivel de acuerdo (%)
-
-**📖 Ver guía completa:** [MODEL_COMPARISON_GUIDE.md](MODEL_COMPARISON_GUIDE.md)
 
 ---
 
-## � V2: Sistema Optimizado
+### Métricas Analizadas
 
-### 💎 Nueva Versión con Mejoras Significativas
+## 🙏 Agradecimientos
 
-Hemos creado **`model_comparison_v2.py`** con mejoras sustanciales:
+- ✅ **Tiempo de respuesta** - Velocidad de decisión
+
+- A la comunidad de OpenRouter por facilitar el acceso a múltiples LLMs- ✅ **Distribución de señales** - BUY/SELL/HOLD %
+
+- A los desarrolladores de los modelos utilizados (Meta, Alibaba, MoonShot AI, etc.)- ✅ **Acuerdo con consenso** - Qué modelo es más "mainstream"
+
+- A la comunidad de Python y data science- ✅ **Agresividad** - Ratio de operaciones vs espera
+
+- ✅ **Unanimidad** - Ciclos donde todos coinciden
+
+---- ✅ **Desacuerdos** - Casos de máxima divergencia
+
+
+
+## 📊 Estadísticas del Proyecto### Datos Guardados
+
+
+
+- **Duración total:** 20 díasArchivo: `model_comparison.csv`
+
+- **Datos analizados:** +20,000 registros- Timestamp, precio, indicadores técnicos
+
+- **Ciclos de análisis:** 4,932 ciclos- Señal de cada modelo individual
+
+- **Modelos evaluados:** 8 LLMs diferentes- Tiempo de respuesta de cada modelo
+
+- **Líneas de código:** +2,000- Consenso calculado
+
+- **Indicadores técnicos:** 12- Nivel de acuerdo (%)
+
+
+
+---**📖 Ver guía completa:** [MODEL_COMPARISON_GUIDE.md](MODEL_COMPARISON_GUIDE.md)
+
+
+
+## 🔮 Trabajo Futuro---
+
+
+
+- [ ] Implementar detección automática de tipo de mercado (lateral/alcista/bajista)## � V2: Sistema Optimizado
+
+- [ ] Sistema híbrido que selecciona el mejor modelo según el contexto
+
+- [ ] Backtesting con datos históricos más extensos### 💎 Nueva Versión con Mejoras Significativas
+
+- [ ] Integración con más exchanges
+
+- [ ] Dashboard en tiempo real con visualizacionesHemos creado **`model_comparison_v2.py`** con mejoras sustanciales:
+
+- [ ] Análisis de sentimiento de noticias y redes sociales
 
 #### 🤖 **Nuevos Modelos (4 diferentes a V1)**
 
+---
+
 | Modelo | Parámetros | Descripción |
-|--------|------------|-------------|
+
+<div align="center">|--------|------------|-------------|
+
 | **Qwen3-32B** | 32B | Ganador de V1 - Prudente |
-| **Llama-4-Maverick-17B** | 17B | Llama 4 Maverick (128e) |
+
+**⭐ Si este proyecto te resulta útil, considera darle una estrella en GitHub ⭐**| **Llama-4-Maverick-17B** | 17B | Llama 4 Maverick (128e) |
+
 | **GPT-OSS-120B** | 120B | Modelo más grande |
-| **Kimi-K2** | MoonShot AI | Arquitectura alternativa |
 
-#### ✨ **Mejoras Implementadas**
+**🎥 [Suscríbete al canal de YouTube](https://www.youtube.com/@AmalioMetria) para más experimentos con IA**| **Kimi-K2** | MoonShot AI | Arquitectura alternativa |
 
-1. **🛡️ Gestión de Riesgo Avanzada**
+
+
+---#### ✨ **Mejoras Implementadas**
+
+
+
+*Desarrollado con ❤️ por Amalio Gómez López*1. **🛡️ Gestión de Riesgo Avanzada**
+
    - Stop-Loss: 2%
-   - Take-Profit: 4%
+
+</div>   - Take-Profit: 4%
+
    - Risk/Reward: 1:2
    - Trailing Stop: 1.5%
 

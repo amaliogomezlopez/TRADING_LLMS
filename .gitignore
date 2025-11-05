@@ -58,16 +58,18 @@ Desktop.ini
 *.sqlite
 *.db
 
-# Trading specific
-trading_log.csv
-*.csv
+# Trading specific - Mantener CSVs de resultados
 backtest_results/
 models/
 outputs/
+logs_backup/
 
-# API Keys and sensitive data
+# Config - Mantener solo examples
+config.yml
+config.ini
+credentials.json
+
+# API Keys y datos sensibles
 *secret*
 *key*
 *token*
-config.ini
-credentials.json
