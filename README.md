@@ -100,4 +100,4 @@ python scripts/analyze_v2_results.py
 
 ---
 
-**Si quieres que haga una revisión final (tablas, enlaces o añadir el link del vídeo), dime y lo dejo listo para push.**
+
