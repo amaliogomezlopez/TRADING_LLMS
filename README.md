@@ -1,4 +1,4 @@
-# 🤖 Trading con LLMs: Experimento con Inteligencia Artificial# 🤖 Trading con LLMs: Experimento de Trading Automatizado# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial# 🤖 Trading Bot with LLM & Technical Analysis
+# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial# 🤖 Trading con LLMs: Experimento con Inteligencia Artificial# 🤖 Trading con LLMs: Experimento de Trading Automatizado# 🤖 Trading con LLMs: Experimento de Trading Automatizado con Inteligencia Artificial# 🤖 Trading Bot with LLM & Technical Analysis
 
 
 
@@ -14,7 +14,7 @@
 
 
 
-Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron 12 indicadores técnicos y tomaron decisiones de compra/venta cada 5 minutos.[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)[![YouTube Channel](https://img.shields.io/badge/YouTube-AmalioMetria-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@AmalioMetria)Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combinado con **análisis técnico avanzado** para tomar decisiones de compra/venta en el mercado de criptomonedas. El bot opera en la **testnet de Binance** para pruebas sin riesgo real.
+Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron 12 indicadores técnicos y tomaron decisiones de compra/venta cada 5 minutos.[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)[![YouTube Channel](https://img.shields.io/badge/YouTube-AmalioMetria-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@AmalioMetria)
 
 
 
@@ -22,7 +22,7 @@ Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** 
 
 
 
-🎥 **[Ver video completo en YouTube](https://www.youtube.com/@AmalioMetria)**## 📖 Sobre el Proyecto[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+🎥 **[Ver video completo del experimento en YouTube](https://www.youtube.com/@AmalioMetria)**## 📖 Descripción[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
@@ -30,7 +30,7 @@ Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** 
 
 
 
-## 🎯 ObjetivosExperimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron 12 indicadores técnicos y tomaron decisiones de compra/venta cada 5 minutos.[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+## 🎯 ObjetivosExperimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron 12 indicadores técnicos y tomaron decisiones de compra/venta cada 5 minutos.[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)[![YouTube Channel](https://img.shields.io/badge/YouTube-AmalioMetria-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@AmalioMetria)Un bot de trading automatizado que utiliza **Large Language Models (LLM)** combinado con **análisis técnico avanzado** para tomar decisiones de compra/venta en el mercado de criptomonedas. El bot opera en la **testnet de Binance** para pruebas sin riesgo real.
 
 
 
@@ -38,7 +38,7 @@ Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** 
 
 - Comparar estrategias conservadoras vs activas
 
-- Medir el valor añadido real (Alpha) de cada modelo**Resultado sorprendente:** Un modelo ganó **+6.92%** con una sola operación, mientras otros hicieron cientos de trades y perdieron dinero.![License](https://img.shields.io/badge/License-MIT-green.svg)
+- Medir el valor añadido real (Alpha) de cada modelo**Resultado sorprendente:** Un modelo ganó **+6.92%** con una sola operación, mientras otros hicieron cientos de trades y perdieron dinero.
 
 - Demostrar que cantidad de operaciones ≠ beneficios
 
@@ -46,177 +46,397 @@ Experimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** 
 
 ---
 
-🎥 **[Ver video completo en YouTube](https://www.youtube.com/@AmalioMetria)**## 📖 Descripción del Proyecto![Status](https://img.shields.io/badge/Status-Active-success.svg)
+🎥 **[Ver video completo en YouTube](https://www.youtube.com/@AmalioMetria)**## 📖 Sobre el Proyecto[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📊 Experimentos Realizados
+## 🧪 Experimentos Realizados
 
 
 
-### Experimento V1 (13 días: 13-26 Oct 2025)
+### 📊 Experimento V1 (13 días: 13-26 Oct 2025)
 
-- **Mercado:** LATERAL (-0.25%)---
+- **Duración:** 13 días continuos---
 
-- **Modelos:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B
+- **Datos:** 14,128 registros
 
-- **Ganador:** 🥇 **Qwen3-32B** (+6.92% ROI, +7.17pp Alpha)
+- **Análisis:** [Ver análisis completo V1](docs/ANALISIS_RESULTADOS_V1.md)
 
-- **Estrategia:** 1 operación en el momento perfecto
 
-## 🎯 ObjetivosExperimento real de trading automatizado donde **8 modelos de lenguaje grandes (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron indicadores técnicos y tomaron decisiones de compra/venta en tiempo real.---
 
-### Experimento V2 (7 días: 19-26 Oct 2025)
+### 📊 Experimento V2 (7 días: 27 Oct - 2 Nov 2025)## 🎯 ObjetivosExperimento real de trading automatizado donde **8 modelos de lenguaje (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron 12 indicadores técnicos y tomaron decisiones de compra/venta cada 5 minutos.[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 
-- **Mercado:** ALCISTA (+4.79%)
+- **Duración:** 7 días continuos
 
-- **Modelos:** Qwen3-32B, Llama-4-Maverick-17B, GPT-OSS-120B, Kimi-K2
+- **Datos:** 6,000+ registros
 
-- **Ganador:** 🥇 **Kimi-K2** (+7.73% ROI, +2.93pp Alpha)- Evaluar la capacidad de diferentes LLMs para tomar decisiones de trading
+- **Análisis:** [Ver análisis completo V2](docs/ANALISIS_RESULTADOS_V2.md)
 
-- **Estrategia:** Trading activo selectivo con gestión de riesgo
+- Evaluar la capacidad de diferentes LLMs para tomar decisiones de trading
 
-- Comparar estrategias conservadoras vs activas
+### 🔍 Comparación V1 vs V2
 
----
+- [Ver comparación detallada](docs/COMPARACION_V1_V2.md)- Comparar estrategias conservadoras vs activas
 
-- Medir el valor añadido real (Alpha) de cada modelo**Resultados sorprendentes:** Un modelo ganó **+6.92%** realizando una sola operación, mientras otros realizaron cientos de trades y perdieron dinero.## 📋 Tabla de Contenidos
 
-## 🏆 Resultados
 
-- Demostrar que cantidad de operaciones ≠ beneficios
+---- Medir el valor añadido real (Alpha) de cada modelo**Resultado sorprendente:** Un modelo ganó **+6.92%** con una sola operación, mientras otros hicieron cientos de trades y perdieron dinero.![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+
+
+## 🏆 Resultados- Demostrar que cantidad de operaciones ≠ beneficios
+
+
 
 ### Ranking por Alpha (Valor Añadido Real)
 
 
 
-| Pos | Modelo | Exp | ROI | Alpha | Trades |
+| Pos | Modelo | Exp | ROI | Alpha | Trades |---
 
-|-----|--------|-----|-----|-------|--------|---
+|-----|--------|-----|-----|-------|--------|
 
-| 🥇 | Qwen3-32B | V1 | +6.92% | **+7.17pp** | 1 |
+| 🥇 | **Qwen3-32B** | V1 | **+6.92%** | **+7.17pp** | 1 |🎥 **[Ver video completo en YouTube](https://www.youtube.com/@AmalioMetria)**## 📖 Descripción del Proyecto![Status](https://img.shields.io/badge/Status-Active-success.svg)
 
-| 🥈 | Kimi-K2 | V2 | +7.73% | **+2.93pp** | 11 |🎥 **[Ver video completo del experimento en YouTube](https://www.youtube.com/@AmalioMetria)**- [Características](#-características)
+| 🥈 | **Kimi-K2** | V2 | **+7.73%** | **+2.93pp** | 11 |
 
-| 🥉 | Llama-3.3-70B | V1 | +1.66% | +1.91pp | 313 |
+| 🥉 | **Llama-3.3-70B** | V1 | **+1.66%** | **+1.91pp** | 313 |## 📊 Experimentos Realizados
 
-| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |## 📊 Experimentos
+| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |
 
 | 5º | Llama-4-Scout-17B | V1 | -2.71% | -2.46pp | 179 |
 
-| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |- [Arquitectura](#-arquitectura)
+| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |
 
-| 7º | Llama-4-Maverick | V2 | 0.00% | -4.79pp | 0 |
+| 7º | Llama-4-Maverick | V2 | 0.00% | -4.79pp | 0 |### Experimento V1 (13 días: 13-26 Oct 2025)
 
-| 8º | GPT-OSS-120B | V2 | 0.00% | -4.79pp | 0 |### Experimento V1 (13 días: 13-26 Oct 2025)
+| 8º | GPT-OSS-120B | V2 | 0.00% | -4.79pp | 0 |
 
+- **Mercado:** LATERAL (-0.25%)---
 
+**Alpha = ROI del Modelo - ROI del Mercado**
 
-### 💡 Lecciones Aprendidas- **Mercado:** LATERAL (-0.25%)---- [Tecnologías](#-tecnologías)
-
-
-
-1. **Timing > Frecuencia** - 1 operación perfecta > 273 mediocres- **Modelos:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B
-
-2. **Menos es Más** - Over-trading destruye beneficios
-
-3. **Alpha es crucial** - Mide el valor real sobre el mercado- **Ganador:** 🥇 **Qwen3-32B** (+6.92% ROI, +7.17pp Alpha)- [Instalación](#-instalación)
-
-4. **Contexto importa** - Modelos diferentes para mercados diferentes
-
-5. **No todas las IAs funcionan** - Solo 2 de 8 fueron rentables- **Estrategia:** 1 operación en el momento perfecto
-
-
-
----## 🎯 Objetivos del Experimento- [Configuración](#-configuración)
-
-
-
-## 🔬 Metodología### Experimento V2 (7 días: 19-26 Oct 2025)
-
-
-
-### Indicadores Técnicos- **Mercado:** ALCISTA (+4.79%)- [Uso](#-uso)
-
-- RSI (Relative Strength Index)
-
-- MACD (Moving Average Convergence Divergence)- **Modelos:** Qwen3-32B, Llama-4-Maverick-17B, GPT-OSS-120B, Kimi-K2
-
-- EMA (9, 21, 50, 200 periodos)
-
-- ADX (Average Directional Index)- **Ganador:** 🥇 **Kimi-K2** (+7.73% ROI, +2.93pp Alpha)- **Evaluar** la capacidad de diferentes LLMs para tomar decisiones de trading- [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
-
-- Bandas de Bollinger
-
-- Análisis de volumen y tendencias- **Estrategia:** Trading activo selectivo con gestión de riesgo
-
-
-
-### Parámetros del Sistema- **Comparar** estrategias conservadoras vs activas- [� V2: Sistema Optimizado](#-v2-sistema-optimizado)
-
-- **Frecuencia:** Cada 5 minutos
-
-- **Capital inicial:** $10,000 USD (virtual)---
-
-- **Tipo:** SPOT (sin apalancamiento)
-
-- **Stop-loss (V2):** 2%- **Medir** el valor añadido real (Alpha) de cada modelo- [�📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
-
-- **Take-profit (V2):** 4%
-
-- **Umbral confianza (V2):** 75%## 🏆 Resultados
-
-
-
-### Cálculo de Alpha- **Demostrar** que más operaciones ≠ más beneficios- [Análisis de Resultados](#-análisis-de-resultados)
-
-
-
-```### Ranking por Alpha (Valor Añadido Real)
-
-Alpha = ROI del Modelo - ROI del Mercado
-
-- [Gestión de Riesgo](#️-gestión-de-riesgo)
-
-Ejemplo (Qwen V1):
-
-  ROI Modelo: +6.92%| Pos | Modelo | Exp | ROI | Alpha | Trades |
-
-  ROI Mercado: -0.25%
-
-  Alpha: +7.17pp ← Valor puro añadido|-----|--------|-----|-----|-------|--------|---- [Roadmap](#-roadmap)
-
-```
-
-| 🥇 | Qwen3-32B | V1 | +6.92% | **+7.17pp** | 1 |
+- **Modelos:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B
 
 ---
 
-| 🥈 | Kimi-K2 | V2 | +7.73% | **+2.93pp** | 11 |- [Contribuciones](#-contribuciones)
+- **Ganador:** 🥇 **Qwen3-32B** (+6.92% ROI, +7.17pp Alpha)
 
-## 📁 Estructura del Proyecto
+## 💡 Lecciones Aprendidas
 
-| 🥉 | Llama-3.3-70B | V1 | +1.66% | +1.91pp | 313 |
+- **Estrategia:** 1 operación en el momento perfecto
 
-```
+### ⏰ Timing > Frecuencia
 
-📦 TRADING_AI/| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |## 📊 Experimentos Realizados- [Disclaimer](#-disclaimer)
+- 1 operación perfecta > 273 mediocres## 🎯 ObjetivosExperimento real de trading automatizado donde **8 modelos de lenguaje grandes (LLMs)** compiten para generar beneficios operando con Bitcoin. Durante 20 días, diferentes IAs analizaron indicadores técnicos y tomaron decisiones de compra/venta en tiempo real.---
 
-├── 📄 README.md
+- **Qwen3-32B:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B
 
-├── 📄 LICENSE| 5º | Llama-4-Scout-17B | V1 | -2.71% | -2.46pp | 179 |
+### Experimento V2 (7 días: 19-26 Oct 2025)
 
-├── 📄 requirements.txt
+### 📉 Mercado: LATERAL (-0.25%)
 
-├── 📄 .env.example| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |
+- El mercado cayó -0.25% durante el experimento- **Mercado:** ALCISTA (+4.79%)
 
-├── 📄 config.example.yml
+- Los modelos debían superar esta barrera para generar Alpha positivo
+
+- **Modelos:** Qwen3-32B, Llama-4-Maverick-17B, GPT-OSS-120B, Kimi-K2
+
+### 🤖 Tecnologías
+
+- **Ganador:** 🥇 **Kimi-K2** (+7.73% ROI, +2.93pp Alpha)- Evaluar la capacidad de diferentes LLMs para tomar decisiones de trading
+
+1. **Modelos Evaluados:**
+
+   - Llama-3.3-70B- **Estrategia:** Trading activo selectivo con gestión de riesgo
+
+   - Llama-3.1-8B
+
+   - Llama-4-Scout-17B- Comparar estrategias conservadoras vs activas
+
+   - Qwen3-32B
+
+   - Kimi-K2---
+
+   - Llama-4-Maverick
+
+   - GPT-OSS-120B- Medir el valor añadido real (Alpha) de cada modelo**Resultados sorprendentes:** Un modelo ganó **+6.92%** realizando una sola operación, mientras otros realizaron cientos de trades y perdieron dinero.## 📋 Tabla de Contenidos
+
+
+
+2. **Indicadores Técnicos (12):**## 🏆 Resultados
+
+   - RSI, MACD, Bollinger Bands
+
+   - SMA, EMA, ATR- Demostrar que cantidad de operaciones ≠ beneficios
+
+   - Volumen, ADX, CCI
+
+   - Stochastic, Williams %R, OBV### Ranking por Alpha (Valor Añadido Real)
+
+
+
+---
+
+
+
+## 📁 Estructura del Proyecto| Pos | Modelo | Exp | ROI | Alpha | Trades |
+
+
+
+```|-----|--------|-----|-----|-------|--------|---
+
+TRADING_LLMS/
+
+├── data/                          # Datos de los experimentos| 🥇 | Qwen3-32B | V1 | +6.92% | **+7.17pp** | 1 |
+
+│   ├── model_comparison.csv       # Resultados V1 (14,128 registros)
+
+│   ├── model_comparison_v2.csv    # Resultados V2| 🥈 | Kimi-K2 | V2 | +7.73% | **+2.93pp** | 11 |🎥 **[Ver video completo del experimento en YouTube](https://www.youtube.com/@AmalioMetria)**- [Características](#-características)
+
+│   └── trading_log.csv            # Log de operaciones
+
+│| 🥉 | Llama-3.3-70B | V1 | +1.66% | +1.91pp | 313 |
+
+├── scripts/                       # Scripts de análisis
+
+│   ├── analyze_v1_results.py      # Análisis experimento V1| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |## 📊 Experimentos
+
+│   └── analyze_v2_results.py      # Análisis experimento V2
+
+│| 5º | Llama-4-Scout-17B | V1 | -2.71% | -2.46pp | 179 |
+
+├── notebooks/                     # Notebooks interactivos
+
+│   ├── model_analysis_v1.ipynb    # Visualizaciones V1| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |- [Arquitectura](#-arquitectura)
+
+│   └── model_analysis_v2.ipynb    # Visualizaciones V2
 
 │| 7º | Llama-4-Maverick | V2 | 0.00% | -4.79pp | 0 |
 
+├── docs/                          # Documentación detallada
+
+│   ├── ANALISIS_RESULTADOS_V1.md  # Análisis completo V1| 8º | GPT-OSS-120B | V2 | 0.00% | -4.79pp | 0 |### Experimento V1 (13 días: 13-26 Oct 2025)
+
+│   ├── ANALISIS_RESULTADOS_V2.md  # Análisis completo V2
+
+│   └── COMPARACION_V1_V2.md       # Comparativa entre versiones
+
+│
+
+└── README.md                      # Este archivo### 💡 Lecciones Aprendidas- **Mercado:** LATERAL (-0.25%)---- [Tecnologías](#-tecnologías)
+
+```
+
+
+
+---
+
+1. **Timing > Frecuencia** - 1 operación perfecta > 273 mediocres- **Modelos:** Llama-3.3-70B, Llama-3.1-8B, Llama-4-Scout-17B, Qwen3-32B
+
+## 🔧 Instalación
+
+2. **Menos es Más** - Over-trading destruye beneficios
+
+### Requisitos
+
+- Python 3.12+3. **Alpha es crucial** - Mide el valor real sobre el mercado- **Ganador:** 🥇 **Qwen3-32B** (+6.92% ROI, +7.17pp Alpha)- [Instalación](#-instalación)
+
+- pandas, numpy, matplotlib, seaborn
+
+4. **Contexto importa** - Modelos diferentes para mercados diferentes
+
+### Pasos
+
+5. **No todas las IAs funcionan** - Solo 2 de 8 fueron rentables- **Estrategia:** 1 operación en el momento perfecto
+
+```bash
+
+# Clonar repositorio
+
+git clone https://github.com/amaliogomezlopez/TRADING_LLMS.git
+
+cd TRADING_LLMS---## 🎯 Objetivos del Experimento- [Configuración](#-configuración)
+
+
+
+# Instalar dependencias
+
+pip install pandas numpy matplotlib seaborn
+
+```## 🔬 Metodología### Experimento V2 (7 días: 19-26 Oct 2025)
+
+
+
+---
+
+
+
+## 🚀 Uso### Indicadores Técnicos- **Mercado:** ALCISTA (+4.79%)- [Uso](#-uso)
+
+
+
+### Ejecutar Análisis- RSI (Relative Strength Index)
+
+
+
+```bash- MACD (Moving Average Convergence Divergence)- **Modelos:** Qwen3-32B, Llama-4-Maverick-17B, GPT-OSS-120B, Kimi-K2
+
+# Análisis V1
+
+python scripts/analyze_v1_results.py- EMA (9, 21, 50, 200 periodos)
+
+
+
+# Análisis V2- ADX (Average Directional Index)- **Ganador:** 🥇 **Kimi-K2** (+7.73% ROI, +2.93pp Alpha)- **Evaluar** la capacidad de diferentes LLMs para tomar decisiones de trading- [🆕 Comparación de Modelos LLM](#-comparación-de-modelos-llm)
+
+python scripts/analyze_v2_results.py
+
+```- Bandas de Bollinger
+
+
+
+### Notebooks Interactivos- Análisis de volumen y tendencias- **Estrategia:** Trading activo selectivo con gestión de riesgo
+
+
+
+```bash
+
+# Abrir Jupyter
+
+jupyter notebook### Parámetros del Sistema- **Comparar** estrategias conservadoras vs activas- [� V2: Sistema Optimizado](#-v2-sistema-optimizado)
+
+
+
+# Abrir cualquiera de los notebooks en notebooks/- **Frecuencia:** Cada 5 minutos
+
+```
+
+- **Capital inicial:** $10,000 USD (virtual)---
+
+---
+
+- **Tipo:** SPOT (sin apalancamiento)
+
+## 📊 Cálculo del Alpha
+
+- **Stop-loss (V2):** 2%- **Medir** el valor añadido real (Alpha) de cada modelo- [�📊 Notebook de Análisis Visual](#-notebook-de-análisis-visual)
+
+El **Alpha** mide el valor añadido real de cada modelo respecto al mercado:
+
+- **Take-profit (V2):** 4%
+
+```
+
+Alpha = ROI del Modelo - ROI del Mercado- **Umbral confianza (V2):** 75%## 🏆 Resultados
+
+
+
+Ejemplo Qwen3-32B:
+
+Alpha = +6.92% - (-0.25%) = +7.17 puntos porcentuales
+
+```### Cálculo de Alpha- **Demostrar** que más operaciones ≠ más beneficios- [Análisis de Resultados](#-análisis-de-resultados)
+
+
+
+- **Alpha Positivo:** El modelo superó al mercado
+
+- **Alpha Negativo:** El modelo fue peor que no hacer nada (HODL)
+
+```### Ranking por Alpha (Valor Añadido Real)
+
+---
+
+Alpha = ROI del Modelo - ROI del Mercado
+
+## ⚠️ Disclaimer
+
+- [Gestión de Riesgo](#️-gestión-de-riesgo)
+
+- **Experimento educativo:** Este proyecto es para investigación y aprendizaje
+
+- **No es asesoramiento financiero:** Los resultados NO garantizan beneficios futurosEjemplo (Qwen V1):
+
+- **Testnet:** Todas las operaciones se realizaron en entornos de prueba
+
+- **Riesgo:** El trading real puede resultar en pérdidas significativas  ROI Modelo: +6.92%| Pos | Modelo | Exp | ROI | Alpha | Trades |
+
+
+
+---  ROI Mercado: -0.25%
+
+
+
+## 📞 Contacto  Alpha: +7.17pp ← Valor puro añadido|-----|--------|-----|-----|-------|--------|---- [Roadmap](#-roadmap)
+
+
+
+- 🎥 **YouTube:** [@AmalioMetria](https://www.youtube.com/@AmalioMetria)```
+
+- 👨‍💻 **Autor:** Amalio Gómez López
+
+- 📁 **GitHub:** [amaliogomezlopez/TRADING_LLMS](https://github.com/amaliogomezlopez/TRADING_LLMS)| 🥇 | Qwen3-32B | V1 | +6.92% | **+7.17pp** | 1 |
+
+
+
+------
+
+
+
+## 📈 Estadísticas del Experimento| 🥈 | Kimi-K2 | V2 | +7.73% | **+2.93pp** | 11 |- [Contribuciones](#-contribuciones)
+
+
+
+- **📅 Duración Total:** 20 días (13 + 7)## 📁 Estructura del Proyecto
+
+- **📊 Registros Analizados:** 20,000+
+
+- **🤖 Modelos Evaluados:** 8| 🥉 | Llama-3.3-70B | V1 | +1.66% | +1.91pp | 313 |
+
+- **📉 Indicadores Utilizados:** 12
+
+- **⏱️ Frecuencia:** Análisis cada 5 minutos```
+
+- **💰 Mercado:** Bitcoin (BTC/USDT)
+
+📦 TRADING_AI/| 4º | Llama-3.1-8B | V1 | -2.07% | -1.82pp | 273 |## 📊 Experimentos Realizados- [Disclaimer](#-disclaimer)
+
+---
+
+├── 📄 README.md
+
+## 🔮 Trabajo Futuro
+
+├── 📄 LICENSE| 5º | Llama-4-Scout-17B | V1 | -2.71% | -2.46pp | 179 |
+
+- [ ] Añadir más modelos LLM
+
+- [ ] Probar con otros activos (ETH, altcoins)├── 📄 requirements.txt
+
+- [ ] Implementar stop-loss automático
+
+- [ ] Añadir análisis de sentimiento de redes sociales├── 📄 .env.example| 6º | Qwen3-32B | V2 | +4.74% | -0.05pp | 6 |
+
+- [ ] Optimizar parámetros de indicadores técnicos
+
+├── 📄 config.example.yml
+
+---
+
+│| 7º | Llama-4-Maverick | V2 | 0.00% | -4.79pp | 0 |
+
+## 📄 Licencia
+
 ├── 📊 data/
+
+Este proyecto está bajo la Licencia MIT. Ver archivo `LICENSE` para más detalles.
 
 │   ├── model_comparison.csv        # Datos V1| 8º | GPT-OSS-120B | V2 | 0.00% | -4.79pp | 0 |### **Experimento V1** (13 días: 13-26 Octubre 2025)---
 
+---
+
 │   ├── model_comparison_v2.csv     # Datos V2
+
+**⭐ Si este proyecto te resulta interesante, considera darle una estrella en GitHub y suscribirte al [canal de YouTube](https://www.youtube.com/@AmalioMetria)**
 
 │   └── trading_log.csv
 
